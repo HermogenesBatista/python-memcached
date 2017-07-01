@@ -159,7 +159,7 @@ class Client(threading.local):
     def __init__(self, servers, debug=0, pickleProtocol=0,
                  pickler=pickle.Pickler, unpickler=pickle.Unpickler,
                  compressor=zlib.compress, decompressor=zlib.decompress,
-                 pload=None, pid=None,
+                 pload=None, pid=None, MAX_ENTRIES=300, CULL_FREQUENCY=3,
                  server_max_key_length=None, server_max_value_length=None,
                  dead_retry=_DEAD_RETRY, socket_timeout=_SOCKET_TIMEOUT,
                  cache_cas=False, flush_on_reconnect=0, check_keys=True):
